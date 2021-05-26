@@ -1,0 +1,13 @@
+GET https://ticketing.dev/api/users/signup/rrentuser
+
+###
+
+POST ticketing.dev/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "email" : "123@test.com",
+    "password": "password"
+}
+
+###
