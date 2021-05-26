@@ -13,7 +13,7 @@ Commands:
 
 ## When building image
 
-docker build -t scoll/posts:0.0.1 .
+docker build -t <docker-name>/posts:0.0.1 .
 
 /////////
 
@@ -53,7 +53,7 @@ docker build -t scoll/posts:0.0.1 .
 
 - rebuild image:
 
-`docker build -t scoll/<image-name> .`
+`docker build -t <docker-name>/<image-name> .`
 
 - OR rebuil image without cache
 
@@ -61,7 +61,7 @@ docker build -t scoll/posts:0.0.1 .
 
 - push image
 
-`docker push scoll/<image-name>`
+`docker push <docker-name>/<image-name>`
 
 - get deployments
 
