@@ -1,13 +1,22 @@
-GET https://ticketing.dev/api/users/signup/rrentuser
+GET https://ticketing.dev/api/users/currentuser
 
 ###
+POST https://ticketing.dev/api/users/signout
 
-POST ticketing.dev/api/users/signup HTTP/1.1
+###
+POST https://ticketing.dev/api/users/signup HTTP/1.1
 content-type: application/json
 
 {
-    "email" : "123@test.com",
+    "email" : "test@test.com",
     "password": "password"
 }
 
 ###
+POST https://ticketing.dev/api/users/signin HTTP/1.1
+content-type: application/json
+
+{
+    "email" : "test@test.com",
+    "password": "password"
+}

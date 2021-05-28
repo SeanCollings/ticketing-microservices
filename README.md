@@ -95,6 +95,16 @@ docker build -t <docker-name>/posts:0.0.1 .
 
 `mk exec -it <pod-name> sh`
 
+### Create a kubernetes secret
+
+- create secret
+
+`mk create secret generic <jwt-secret> --from-literal=<JWT_KEY='secret'>`
+
+- get all secrets
+
+`mk get secrets`
+
 ### Remove docker images
 
 - list all images
@@ -139,4 +149,4 @@ docker build -t <docker-name>/posts:0.0.1 .
 
 - If ingress fails with 'Internal error occurred: failed calling webhook "validate.nginx.ingress.kubernetes.io"', run:
 
-`mk delete -A ValidatingWebhookConfiguration ingress-nginx-admission`
+`minikube kubectl -- delete -A ValidatingWebhookConfiguration ingress-nginx-admission`
