@@ -150,3 +150,9 @@ docker build -t <docker-name>/posts:0.0.1 .
 - If ingress fails with 'Internal error occurred: failed calling webhook "validate.nginx.ingress.kubernetes.io"', run:
 
 `minikube kubectl -- delete -A ValidatingWebhookConfiguration ingress-nginx-admission`
+
+### Get ingress-nginx ip
+
+`mk get pods -n ingress-nginx`
+
+`mk describe pod ingress-nginx-controller-<TAG> -n ingress-nginx`
