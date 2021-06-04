@@ -1,9 +1,9 @@
 GET https://ticketing.dev/api/users/currentuser
 
-###
+### ================== AUTHENTICATION =====================
 POST https://ticketing.dev/api/users/signout
 
-###
+### signup
 POST https://ticketing.dev/api/users/signup HTTP/1.1
 content-type: application/json
 
@@ -12,11 +12,37 @@ content-type: application/json
     "password": "password"
 }
 
-###
+### signin
 POST https://ticketing.dev/api/users/signin HTTP/1.1
 content-type: application/json
 
 {
     "email" : "test@test.com",
     "password": "password"
+}
+
+###
+POST https://ticketing.dev/api/tickets HTTP/1.1
+content-type: application/json
+
+{
+    "title" : "Concert",
+    "price": 10
+}
+
+### ================== TICKETS =====================
+GET https://ticketing.dev/api/tickets HTTP/1.1
+content-type: application/json
+
+###
+GET https://ticketing.dev/api/tickets/60b9d912dc48750090a31dc3 HTTP/1.1
+content-type: application/json
+
+###
+PUT https://ticketing.dev/api/tickets/60b9d912dc48750090a31dc3 HTTP/1.1
+content-type: application/json
+
+{
+    "title" : "New Concert",
+    "price": 500
 }
