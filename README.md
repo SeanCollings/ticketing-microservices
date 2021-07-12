@@ -95,6 +95,16 @@ docker build -t <docker-name>/posts:0.0.1 .
 
 `mk exec -it <pod-name> sh`
 
+## Port-forwarding
+
+- get pods
+
+`mk get pods`
+
+- establish port-forwarding
+
+`mk port-foward <POD_NAME> <port on local machine>:<port on pod to access>`
+
 ### Create a kubernetes secret
 
 - create secret
@@ -138,6 +148,10 @@ docker build -t <docker-name>/posts:0.0.1 .
 - assign that function to an alias:
 
 `Set-Alias mk MKube`
+
+- or together
+
+`Function MKube { minikube kubectl -- $args } & Set-Alias mk MKube`
 
 - Now that function can be used as shorthand:
 
