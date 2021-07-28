@@ -3,14 +3,14 @@ import mongoose from 'mongoose';
 // What we add to create a Ticket
 interface TicketAttrs {
   title: string;
-  price: string;
+  price: number;
   userId: string;
 }
 
 // What mongo returns for a created Ticket doc
 interface TicketDoc extends mongoose.Document {
   title: string;
-  price: string;
+  price: number;
   userId: string;
 }
 
